@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đưa thông tin sản phẩm</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <div style="border-style: groove;">
+            <p>Thông tin sản phấm</p>
+            <label for="nameitem">Tên sản phẩm</label>
+            <input type="text" name="nameitem" id="nameitem" required>
+            <label for="soluong">Số lượng</label>
+            <input type="number" name="soluong" id="soluong" min="0" placeholder="1" required style="width: 50px;">
+        </div>
+        <div style="border-style: groove;">
+            <p>Thông tin giao hàng</p>
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" name="fullname" id="fullname" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" name="phone" id="phone" required>
+            <label for="address">Địa chỉ</label>
+            <textarea name="address" id="address" rows="2"></textarea>
+        </div>
+        <div style="border-style: groove;">
+            <p>Thông tin thanh toán</p>
+            <label for="pay">Phương thức thanh toán</label>
+            <select name="pay" id="pay">
+                <option value="pay1">Thanh toán khi nhận hàng</option>
+                <option value="pay2">Thanh toán trước khi nhận hàng</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Đặt hàng">
+        </div>
+    </form>
+</body>
+</html>

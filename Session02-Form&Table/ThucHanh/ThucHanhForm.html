@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Form</title>
+</head>
+<body>
+        <form action="ThucHanhForm.html" method="post" style="border-style: groove;">
+            <h3 style="margin-left: 10px;">Create Account</h3>
+
+            <div style="border-style: groove;margin-left: 10px;">
+                <p>Registration information</p> <br>
+                <label for="firstname">First name*: </label> <input type="text" name="firstname" placeholder="enter your first name" size="20">
+                <label>Last name: </label> <input type="text" name="lastname" placeholder="enter your last name" size="20">
+                <br>
+                <label>Email*: </label> <input type="text" name="email" placeholder="enter your email" size="20">
+                <label>Phone*: </label> <input type="text" name="phone" placeholder="enter your phone number" size="20">
+                <br>
+                <label>Password*: </label> <input type="password" name="password" placeholder="enter your password" size="20">
+                <label>Confirm Password*: </label> <input type="password" name="confirmpassword" placeholder="enter your password again" size="20">
+            </div>
+
+            <div style="border-style: groove; margin-top: 10px; margin-left: 10px;">
+                <p>Person information</p><br>
+                <label>
+                    <strong>Gender: </strong>
+                    <input type="radio" name="gd"/>Male
+                    <input type="radio" name="gd"/>Female
+                </label>
+                <label>
+                    <strong>Hobbies</strong>
+                    <input type="checkbox" name="hb">Music
+                    <input type="checkbox" name="hb">Sports
+                    <input type="checkbox" name="hb">Travel
+                    <input type="checkbox" name="hb">Movies
+                </label>
+                <br>
+                <label>
+                    <strong>Source of Income: </strong>
+                    <select>
+                        <option value="emoloyee">Emoloyee</option>
+                        <option value="product">Product</option>
+                    </select>
+                </label>
+                <label>
+                    <strong>Income: </strong>
+                    <input type="range" name="income" min="1" max="10">
+                </label>
+                <br>
+                <label>
+                    <strong>Age: </strong>
+                    <input type="number" name="age" min="1" style="width: 70px;">
+                </label>
+                <label>
+                    <strong>Profile Picture: </strong>
+                    <input type="file" name="picture">
+                </label>
+                <br>
+                <label>
+                    <strong>Birthday: </strong>
+                    <input type="date" name="bday">
+                </label>
+                <label>
+                    <strong>Address</strong>
+                    <input type="text" name="address">
+                </label>
+                <br>
+                <label>
+                    <strong>Bio:</strong>
+                    <textarea name="bio" cols="50" rows="4"></textarea>
+                </label>
+            </div>
+
+            <div style="margin-top: 10px; margin-left: 10px;margin-bottom: 10px;">
+                <input type="button" name="create" value="Create" onclick="alert('Tạo thành công!!!')">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+
+</body>
+</html>
