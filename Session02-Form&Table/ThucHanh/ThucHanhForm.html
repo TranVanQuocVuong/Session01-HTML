@@ -9,8 +9,8 @@
         <form action="ThucHanhForm.html" method="post" style="border-style: groove;">
             <h3 style="margin-left: 10px;">Create Account</h3>
 
-            <div style="border-style: groove;margin-left: 10px;">
-                <p>Registration information</p> <br>
+            <fieldset>
+                <legend>Registration information</legend> <br>
                 <label for="firstname">First name*: </label> <input type="text" name="firstname" placeholder="enter your first name" size="20">
                 <label>Last name: </label> <input type="text" name="lastname" placeholder="enter your last name" size="20">
                 <br>
@@ -19,10 +19,10 @@
                 <br>
                 <label>Password*: </label> <input type="password" name="password" placeholder="enter your password" size="20">
                 <label>Confirm Password*: </label> <input type="password" name="confirmpassword" placeholder="enter your password again" size="20">
-            </div>
+            </fieldset>
 
-            <div style="border-style: groove; margin-top: 10px; margin-left: 10px;">
-                <p>Person information</p><br>
+            <fieldset>
+                <legend>Person information</legend><br>
                 <label>
                     <strong>Gender: </strong>
                     <input type="radio" name="gd"/>Male
@@ -70,7 +70,7 @@
                     <strong>Bio:</strong>
                     <textarea name="bio" cols="50" rows="4"></textarea>
                 </label>
-            </div>
+            </fieldset>
 
             <div style="margin-top: 10px; margin-left: 10px;margin-bottom: 10px;">
                 <input type="button" name="create" value="Create" onclick="alert('Tạo thành công!!!')">
