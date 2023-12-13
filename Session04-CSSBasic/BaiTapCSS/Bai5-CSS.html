@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: darkgray;
+            width: 400px;
+            padding: 20px;
+        }
+        .dangki
+        {
+            background-color: bisque;
+            padding: 10px;
+        }
+        .item
+        {
+            display: block; 
+            padding: 10px;        
+        }
+        input
+        {
+            background-color: darkgray;
+            border: none;
+            width: 350px;
+            height: 20px;
+        }
+        .btn
+        { 
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: cornflowerblue;
+            border-radius: 3px;
+            width: 80px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form class="form" action="">
+        <h2 align="center">Đăng kí tài khoản</h2>
+        <div class="dangki">
+            <div class="item">
+                <label for="">Họ và tên:</label><br>
+                <input type="text">
+            </div>
+            <div class="item">
+                <label for="">Email:</label><br>
+                <input type="email">
+            </div>
+            <div class="item">
+                <label for="password">Mật khẩu:</label><br>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="item">
+                <label for="repassword">Nhập lại mật khẩu:</label><br>
+                <input type="password">
+            </div>
+            <input class="btn" type="submit" value="Đăng kí">
+        </div>
+
+    </form>
+</body>
+</html>
