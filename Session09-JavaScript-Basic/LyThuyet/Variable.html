@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <!-- 
+        Variable(biến): là từ khóa dùng để khai báo các kiểu dữ liệu.
+        3 từ khóa để khai báo biến:
+            + var:
+                var có thể khai báo lại
+                var có thể gán lại giá trị
+                phạm vi hoạt động function
+                có hosting
+
+            + let
+                không thể khai báo lại
+                có thể gán lại giá trị
+                phạm vi hoạt động là block - scope
+                có hosting nhưng không thể truy cập được
+
+            + const thường dùng để khai báo hằng số
+                không thể khai báo lại
+                không thể gán lại giá trị
+                phạm vi hoạt động là block - scope
+                có hosting nhưng không thể truy cập được
+                khi khai báo bắt buộc phải gán giá trị cho nó
+
+            fullName: tên biến
+                có phân biệt hoa thường
+                đặt tên theo quy tắc camel-case(quy tắc con lạc đà)
+                không được bắt đầu bằng số, chữ cái đặt biệt (trừ $, _)
+                tránh đặt tên trùng với từ khóa đặt biệt trong js (class, let, var, try, cacth,...)
+
+            = : gán giá trị (chứ không phải so sánh)
+            Vũ Hồng Vân: giá trị của biến
+     -->
+    
+     <script>
+        var fullName = "Vũ Hồng Vân";
+        var fullName = "chung";
+
+        let age = 25;
+            age = 30;
+
+        console.log(fullName)
+        console.log(age)
+     </script>
+</body>
+</html>

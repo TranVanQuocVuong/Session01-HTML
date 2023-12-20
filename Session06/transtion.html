@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn
+        {
+            width: 80px;
+            height: 30px;
+            background-color: #dbdbdb;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .btn:hover
+        {
+            background-color: green;
+        }
+
+        .btn-1
+        {
+            position: relative;
+            width: 150px;
+            margin: 50px;
+            height: 75px;
+            background-color: #dbdbdb;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .btn-1 span:nth-child(1){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: green;
+            transition: all 1s linear;
+        }
+
+        .btn-1:hover span:nth-child(1){
+            width: 100%;
+        }
+
+        .btn-1 span:nth-child(2){
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 0;
+            background-color: green;
+            transition: all 0.5s linear 1s;
+        }
+
+        .btn-1:hover span:nth-child(2){
+            height: 100%;
+        }
+
+        .btn-1 span:nth-child(3){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 5px;
+            background-color: green;
+            transition: all 1s linear 1.5s;
+        }
+
+        .btn-1:hover span:nth-child(3){
+            width: 100%;
+        }
+
+        .btn-1 span:nth-child(4){
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background-color: green;
+            transition: all 0.5s linear 2.5s;
+        }
+
+        .btn-1:hover span:nth-child(4){
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">
+        Login
+    </button>
+
+    <div class="btn-1">
+        Resgisn
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

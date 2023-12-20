@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header
+{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.link
+{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.form
+{
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+.items
+{
+    padding: 5px;
+} 
+.btn
+{
+    width: 70px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+input, select
+{
+    width: 600px;
+    height: 20px;
+    margin-top: 5px;
+}
+label
+{
+    font-weight: bold;
+}
+footer
+{
+    padding: 50px 20px;
+}
