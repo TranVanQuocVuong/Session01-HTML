@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECISION</title>
+</head>
+
+<body>
+    <!-- 
+        DECISION : câu điều kiện
+            if
+                Đối với if (condition) Thỏa mãn thì phần thân if được thực thi
+                Thế nào là thỏa mãn: là trusthy thì chạy
+
+            if-else
+                
+            if-else-if
+            switch-case
+     -->
+    <script>
+        // let a = 7;
+        // if (a > 5) {
+        //     // template literial
+        //     // có thể truyền biến vào trong string
+        //     console.log(`${a} lớn hơn 5`)
+        // }
+
+        let day = +prompt("mời bạn nhập ngày");
+
+        // switch (day) {
+        //     // case sẽ đi kiểm tra value có bằng key hay không
+        //     // Các case kiểm tra === kiểm tra nghiêm ngặt nên đưa về cùng kiểu dữ liệu
+        //     case 2:
+        //         console.log("ngày thứ 2");
+        //         break;
+        //     case 3:
+        //         console.log("ngày thứ 3");
+        //         break;
+        //     case 4:
+        //         console.log("ngày thứ 4");
+        //         break;
+        //     default:
+        //         console.log("ngày không thỏa mãn!");
+        // }
+
+        // cho người dùng 
+        switch (day) {
+            case 2:
+            case 4:
+            case 6:
+                console.log("Ngày đi học");
+                break;
+            default:
+                console.log("không đi học");
+        }
+    </script>
+</body>
+
+</html>
