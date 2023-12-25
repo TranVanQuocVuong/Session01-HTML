@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Array: Mảng - dùng để lưu trữ các giá trị
+            giá trị ở đây có thể là mọi kiểu dữ liệu
+            các phần tử trong mảng ngăn cách với nhau bởi dấu phẩy
+
+        1. Các cách khai báo 1 mảng
+            cách 1: let products = ["iphone5", "iphone6"];
+            cách 2: let numbers = new Array(1, 2, 5); - tham khảo
+
+        2. Đặt tên mảng
+            đặt tên mảng có ý nghĩa
+            giống quy tắc đặt tên biến
+
+        3. .length là số phần tử trong mảng
+
+        4. các phần tử trong mảng được đánh index từ 0
+
+
+        CRUD - với mảng
+            C: create - thêm
+                1. push()   : thêm phần tử vào vị trí cuối cùng của mảng
+                2. unshift(): thêm phần tử vào vị trí đầu tiên của mảng
+                3. splice() : có thể thêm, sửa, xóa phần tử theo mục đích 
+                    có 3 tham số:
+                        1 là vị trí
+                        2 là số phần tử muốn xóa
+                        3 là giá trị phần tử thêm vào
+            R: read - hiển thị ra
+                dùng vòng lặp for; for-in; for-off
+                    for-in trả về index
+                    for-of trả về giá trị
+            U: update - cập nhật
+                dùng update theo vị trí
+                    array[index] = "giá trị mới"
+                dùng splice
+            D: delete - xóa
+                pop()   : xóa phần tử cuối cùng
+                shift() : xóa phần tử đầu tiên
+                splice(): xóa phần tử theo vị trí
+
+     -->
+    <script>
+        let array = ["hoa", "hồng", "minh", 5, null, []];
+        let numbers = new Array(1, 2, 5);
+        console.log("1111",numbers);
+
+        let students = [];
+            students.push("thủy");
+            students.push("chung");
+            students.unshift("hoa");
+            // ['hoa', 'thủy', 'chung']
+            students.splice(2,0,"tiên")
+            // ['hoa', 'thủy', 'tiên', 'chung']
+            console.log("1111 ", students);
+
+            let jobs = ["đá bóng", "cầu lông", "bóng bàn"];
+            for (let i = 0; i < jobs.length; i++) {
+                document.write(jobs[i]);
+                document.write("<br>")                
+            }
+
+            let buts = ["bút bi", "bút mực", "bút chì"];
+            // for (let abc in buts) {
+            //     console.log("abc", buts[abc]);
+            // }
+
+            // for (let abc of buts) {
+            //     console.log("abc", abc);
+            // }
+
+            buts[1] = "bút màu";
+            buts.splice(0, 1, "bút dạ");
+            console.log("11111 ",buts);
+    </script>
+</body>
+</html>

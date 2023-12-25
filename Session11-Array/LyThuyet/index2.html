@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Các phương thức làm việc với chuỗi (text);
+            1. split(): cắt chuỗi thành mảng
+            2. join() : gộp các phần tử trong mảng thành chuỗi
+        
+        Các phương thức thêm để làm việc với mảng
+            1. reverse(): đảo ngược các phần tử trong mảng
+            2. sort()   : sắp xếp các phần tử trong mảng theo bảng mã ASSCI
+            3. indexof  : kiểm tra phần tử có trong mảng hay không
+                Nếu có trả về vị trí
+                Nếu không có trả về -1
+            4. include  : kiểm tra phần tử có trong mảng hay không
+                Nếu có trả về true
+                Nếu không trả về false
+            5. slice    : sao chép ra 1 cái mảng mới không liên quan tới mảng ban đầu
+     -->
+    <script>
+        let text = "hello";
+        let result = text.split("");
+        console.log(result);
+        
+        let a = result.join("-");
+        console.log(a);
+
+        let students = ["vân", "hoa", "hồng", "mai", "an", "thúy"];
+            // students.reverse();
+            students.sort();
+        console.log("students ",students)
+    </script>
+</body>
+</html>
