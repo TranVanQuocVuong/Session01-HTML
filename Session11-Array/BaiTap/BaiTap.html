@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Nhập từ");
+        let vietNamese = ["xanh","đỏ","tím","vàng","trắng"];
+        let english = ["blu","red","violet","yellow","white"];
+
+        let result = vietNamese.indexOf(str.toLowerCase());
+        // for (let a of english) {
+        //     console.log(vietNamese.indexOf(str));
+        // }
+        if (result == -1) {
+            document.write("Từ nhập không có")
+        }
+        else{
+            document.write(english[result]);
+        }    
+    </script>
+</body>
+</html>

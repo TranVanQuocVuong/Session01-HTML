@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <script>
+        let todoList = ["Go to school at 7am", "Read book at 12am"];
+        let character = prompt("Nhập C/R/U/D/E");
+
+        do {
+            switch (character.toUpperCase()) {
+                case 'C':
+                    let newJob = prompt("Nhập công việc mới");
+                    todoList.push(newJob);
+                    document.write(todoList);
+                    break;
+
+                case 'R':
+                    document.write(todoList);
+                    break;
+
+                case 'U':
+                    let locationUpdate = +prompt("Vị trí công việc muốn cập nhật");
+                    let updateJob = prompt("Nhập công việc mới");
+                    todoList[location - 1] = updateJob;
+                    document.write("Danh sách công việc sau khi cập nhật:   ", todoList);
+                    break;
+
+                case 'D':
+                    let locationDelete = +prompt("Vị trí công việc muốn xóa");
+                    todoList.splice(locationDelete, 1);
+                    document.write("Danh sách công việc sau khi xóa:   ", todoList);
+                    break;
+                default:
+                    let character = prompt("Nhập C/R/U/D/E");         
+            }
+            break;
+        } while (character.toUpperCase == 'E');
+
+
+    </script>
+</body>
+
+</html>
