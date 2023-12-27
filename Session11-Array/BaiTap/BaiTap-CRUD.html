@@ -12,7 +12,7 @@
         let todoList = ["Go to school at 7am", "Read book at 12am"];
         let character = prompt("Nhập C/R/U/D/E");
 
-        do {
+        while (character.toUpperCase == 'E') {
             switch (character.toUpperCase()) {
                 case 'C':
                     let newJob = prompt("Nhập công việc mới");
@@ -40,7 +40,7 @@
                     let character = prompt("Nhập C/R/U/D/E");         
             }
             break;
-        } while (character.toUpperCase == 'E');
+        } 
 
 
     </script>
