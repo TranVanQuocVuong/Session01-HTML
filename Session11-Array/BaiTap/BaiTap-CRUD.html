@@ -10,9 +10,9 @@
 <body>
     <script>
         let todoList = ["Go to school at 7am", "Read book at 12am"];
-        let character = prompt("Nhập C/R/U/D/E");
+        let character = prompt("Nhập C/R/U/D/E").toUpperCase();
 
-        while (character.toUpperCase != 'E') {
+        while (character != 'E') {
             switch (character.toUpperCase()) {
                 case 'C':
                     let newJob = prompt("Nhập công việc mới");
@@ -26,8 +26,11 @@
 
                 case 'U':
                     let locationUpdate = +prompt("Vị trí công việc muốn cập nhật");
+                    while (locationUpdate > todoList.length-1 || locationUpdate < 0) {
+                        
+                    }
                     let updateJob = prompt("Nhập công việc mới");
-                    todoList[location - 1] = updateJob;
+                    todoList[location] = updateJob;
                     document.write("Danh sách công việc sau khi cập nhật:   ", todoList);
                     break;
 
@@ -39,7 +42,6 @@
                 default:
                     let character = prompt("Nhập C/R/U/D/E");         
             }
-            break;
         } 
 
 

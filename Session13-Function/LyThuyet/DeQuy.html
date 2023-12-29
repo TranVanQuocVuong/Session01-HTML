@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đệ quy</title>
+</head>
+<body>
+    <script>
+        // không dùng đệ quy tính giai thừa của 5
+        /* let giaiThua = 1;
+        for (let i = 1; i <= 5; i++) {
+            giaiThua = giaiThua*i;       
+        }
+        console.log(giaiThua); */
+
+        // dùng đệ quy tính giai thừa của 5
+        function giaiThua(a) {
+            if (a == 1) return 1
+            return a * giaiThua(--a)               
+            
+        }
+        console.log(giaiThua(5));
+    </script>
+</body>
+</html>

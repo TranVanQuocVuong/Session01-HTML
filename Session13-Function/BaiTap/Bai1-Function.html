@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Min của 3 số</title>
+</head>
+<body>
+    <script>
+        // let a = +prompt("Nhập số a: ");
+        // let b = +prompt("Nhập số b: ");
+        // let c = +prompt("Nhập số c: ");
+        
+        function minNumber(a,b,c) {
+            if (a > b && a > c) {
+                console.log(a);
+            }else if (b > a && b > c) {
+                console.log(b);
+            }else console.log(c);
+        }
+
+        function nhap() {
+            let a = +prompt("Nhập số a: ");
+            let b = +prompt("Nhập số b: ");
+            let c = +prompt("Nhập số c: ");
+            minNumber(a,b,c);
+        }
+        
+        nhap();
+    </script>
+</body>
+</html>
