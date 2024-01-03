@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Nhập chuỗi");
+        let arrayStr = str.split('');
+
+        function checkAndDeleteNumber() {
+            for (let i = arrayStr.length -1; i >=0; i--) {
+                if (!isNaN(arrayStr[i])) {
+                    arrayStr.splice(i,1)
+                }
+            }
+            let result = arrayStr.join('');
+            return result;
+        }
+        console.log(checkAndDeleteNumber(arrayStr));
+        checkAndDeleteNumber(arrayStr);
+    </script>
+</body>
+</html>

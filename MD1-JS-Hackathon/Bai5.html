@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo chuỗi</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Nhập chuỗi")
+        function reverseWithSpace(str){
+            let array = str.split(' ');
+            for(let i = 0; i < array.length; i++){
+                let tempArray = array[i].split('');
+                console.log(tempArray);
+                tempArray.reverse('');
+                array[i] = tempArray.join('');
+            }
+            let result = array.join(' ');
+            return result;
+        }
+
+        console.log(reverseWithSpace(str));
+    </script>
+</body>
+</html>

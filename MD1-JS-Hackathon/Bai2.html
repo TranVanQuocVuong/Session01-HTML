@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng các số nguyên tố</title>
+</head>
+
+<body>
+    <script>
+        let n = Number(prompt("Nhập số lượng số muốn thêm"));
+        let array = [];
+        for (let i = 0; i < n; i++) {
+            let number = +prompt("Nhập số");
+            array.push(number)
+        }
+        console.log(array);
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function tongSNT() {
+            let S = 0
+            for (let i = 0; i < array.length; i++) {
+                if (isPrime(array[i])) {
+                    S = S + array[i];
+                }
+            }
+            return S;
+        }
+        let result = tongSNT(array);
+        console.log(result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập tên sản phẩm muốn mua" id="input">
+    <button onclick="addToCart()">Buy</button>
+    <script>
+        
+        let store = [["pc",5000],["banhmi",2000],["ao",3000]];
+        let cart = [];
+        
+
+        function addToCart() {
+            // lấy giá trị ô input người dùng nhập vào
+            let inputValue = document.getElementById('input').value;
+            /* 
+                khi người dùng nhập giá trị ô input
+                có giá trị người dùng nhập vào rồi 
+                kiểm tra xem trong cửa hàng có tồn tại sản phẩm người mua hay không
+                Nếu có cho đi mua
+                    kiểm tra xem sản phẩm có trong giỏ hàng hay không
+                    nếu có rồi thì tăng số lượng, nếu không có thì push vào bình thường
+                Nếu không có thông báo không có sản phẩm
+            */
+
+            // kiểm tra xem trong cửa hàng có tồn tại sản phẩm người mua hay không
+            let checkStore = -1;
+            for (let i = 0; i < store.length; i++) {
+                if (store[i][0] === inputValue) {
+                    checkStore = i;
+                    break;
+                }
+            }
+
+            if (checkStore === -1) {
+                console.log("Sản phẩm không tồn tại");
+                return
+            }
+            // Nếu có cho đi mua
+                // kiểm tra xem sản phẩm có trong giỏ hàng hay không
+                // nếu có rồi thì tăng số lượng, nếu không có thì push vào bình thường
+            console.log("đi mua hàng");
+            let checkCart = -1 //để vòng for chạy hết thì mình mới kiểm tra biến checkCart
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i][0] === inputValue) {
+                    checkCart = i;
+                    break;
+                }
+            }
+
+            if (checkCart !== -1) {
+                // chứng tỏ sản phẩm có trong giỏ hàng
+                cart[checkCart][2] += 1;
+                console.log(cart); 
+            }else{
+                // không có sản phẩm trong giỏ hàng thì push vào
+                cart.push([...store[checkStore],1]); // ... : toán tử spread
+                console.log(cart);
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
