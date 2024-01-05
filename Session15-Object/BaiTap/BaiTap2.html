@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button onclick="addToCart()">mua</button>
+    <script>
+        let products = [
+            {
+                name: "iphone5",
+                price: 50000,
+                id: 5
+            },
+            {
+                name: "iphone6",
+                price: 60000,
+                id: 6
+            },
+            {
+                name: "iphone7",
+                price: 70000,
+                id: 7
+            },
+            {
+                name: "iphone8",
+                price: 80000,
+                id: 8
+            }
+        ]
+        let cart = [];
+        function addToCart() {
+            //lấy giá trị ô input
+            let valueInput = document.getElementById("input").value;
+
+
+            // xem sản phẩm có trong cửa hàng hay không
+            //nếu có cho đi mua nếu không có dừng lại luôn
+            let checkProducts = -1;
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].name === valueInput) {
+                    checkProducts = i;
+                    break;
+                }
+            }
+            // Không có sản phẩm
+            if (checkProducts === -1) {
+                console.log("Sản phẩm không tồn tại");
+                return
+            }
+
+            // có sản phẩm
+            console.log("đi mua hàng");
+            //kiểm tra xem sản phẩm đang mua có trong giỏ hàng hay chưa
+            let checkCart = -1 //để vòng for chạy hết thì mình mới kiểm tra biến checkCart
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].name === valueInput) {
+                    checkCart = i;
+                    break;
+                }
+            }
+            //nếu có thì tăng số lượng
+            if (checkCart !== -1) {
+                // chứng tỏ sản phẩm có trong giỏ hàng
+                ++cart[checkCart].quantity;
+            } else {
+                // không có sản phẩm trong giỏ hàng thì push vào
+                cart.push([products[checkProducts]]); // ... : toán tử spread
+                console.log(cart);
+
+                /* let result = cart.findIndex((item,index,value) => {
+                    return item.name === valueInput;
+                })
+                cart[result].quantity = 1;  */
+                
+            }
+            console.log(cart);
+            //đi mua hàng rồi tính giá tiền phải trả khi mua 
+            // tính bill phải trả.
+            let sum = cart.reduce((accumulator, valueInput, index) => {
+                return accumulator + valueInput.price * valueInput.quantity;
+            }, 0)
+            console.log("số tiền phải trả: ", sum);
+        }
+    </script>
+</body>
+
+</html>

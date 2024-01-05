@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+
+    -->
+    <script>
+        let students = [
+            {
+                name:"hoa",
+                age:25,
+                id:12
+            },
+            {
+                name:"hồng",
+                age:25,
+                id:13
+            },
+            {
+                name:"nhung",
+                age:25,
+                id:14
+            },
+            {
+                name:"vân",
+                age:25,
+                id:15
+            }
+        ]
+        
+        /*
+            1. xóa đối tượng có id=13
+            2. thêm thuộc tính address và đối tượng có id=14
+            3. cập nhật giá trị thuộc tính name thành "ánh" cho đối tượng có i="15"
+        */
+        console.log(students);
+        let deleteId = students.findIndex((item,index,value)=>{
+            return item.id === 13
+        })
+        students.splice(deleteId,1);
+        console.log(students);
+
+        /* let updateKey = students.findIndex((item,index,value)=>{
+            return item.id === 14;
+        })
+        students[updateKey].address = "";
+        console.log(students); */
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].id===14) {
+                students[i].address="HN";
+            }
+        }
+        console.log(students);
+
+        /* let updateValue = students.findIndex((item,index,value)=>{
+            return item.id === 14;
+        })
+        students[updateValue].name = "ánh";
+        console.log(students); */
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].id===15) {
+                students[i].name="ánh";
+            }
+        }
+        console.log(students);
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Các phương thức làm việc với mảng:
+            giúp cho code nhanh hơn, gọn gàng hơn
+        ==> bản chất dùng for có thể xử lí hết vấn đề nhưng nó dài dòng hơn.
+        
+        Khi học hàm này thì nhớ
+            1. đầu vào
+            2. đầu ra (kết quả trả về của hàm).
+
+
+        1. filter (lọc)
+            Kết quả trả về là 1 mảng
+                Nếu thỏa mãn điều kiện mảng chứa phần tử
+                Nếu không thỏa mãn thì mảng rỗng
+                Trả về mảng mới4
+
+        2. map
+            Tạo ra mảng mới
+            Số lượng phần tử trong mảng bằng số lượng phần tử mảng ban đầu
+
+        3. forEach
+            Không tạo ra mảng mới
+            Không nhận return
+            tương tác trực tiếp với các phần tử mảng ban đầu
+
+        4. find
+            Tìm kiếm phần tử thỏa mãn điều kiện và trả về phần tử đó
+            Nếu không thỏa mãn sẽ trả về undefined
+
+        5. findIndex
+            Thỏa mãn trả về vị trí
+            Nếu không thỏa mãn trả về -1
+
+        6. some
+            Trả về true nếu 1 phần tử thỏa mãn điều kiện
+            Không thì trả về false
+
+        7. every
+            Tất cả phải thỏa mãn điều kiện
+
+        8. reduce
+            Dùng hàm để tính toán
+        ....
+    -->
+    <script>
+        // let numbers = [5,6,8,7,9,1];
+        
+        // lọc các phần tử lớn hơn 5
+        
+        // Dùng for
+        /* let result = [];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i]>5) {
+                result.push(numbers[i]);
+            }
+        }
+        console.log(resultS); */
+
+        // Dùng hàm filter
+        /* let result = numbers.filter((item,index,array)=>{
+            // console.log("item",item);
+            // console.log("index",index);
+            // console.log("array",array);
+            return item > 5;
+        })
+        console.log(result); */
+
+        // Dùng map
+        /* let result = numbers.map((item,index,array)=>{
+            return item>5;
+        })
+        console.log(result); */
+
+        // forEach
+        /* numbers.forEach((item,index,array)=>{
+            numbers[index] = item*2;
+        })
+        console.log(); */
+
+        // find
+        /* let student= [
+            {
+                name: "hoa",
+                id:11,
+                age:25
+            },
+            {
+                name: "hồng",
+                id:31,
+                age:30
+            }
+        ] */
+
+        // find
+        /* let result = student.find((item,index,value)=>{
+            return item.id == 11
+        })
+        console.log(result); */
+
+        // every
+        /* let result = student.every((item,index,value)=>{
+            return item.age > 24
+        })
+        console.log(result); trả về true*/
+
+        // reduce
+        let numbers = [5,8,7,4,6,8];
+        /* sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        console.log(sum); */
+
+        let result = numbers.reduce((accumulator,itemValue,index)=>{// accumulator: biến tích lũy
+            return accumulator + itemValue;
+        },0)
+        console.log(result);
+        
+    </script>
+</body>
+</html>

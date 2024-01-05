@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Object: đối tượng
+            thuộc kiểu dữ liệu tham chiếu, kiểu dữ liệu phức tạp, reference type
+                I. Các cách khởi tạo đối tượng
+                    1. let student = {};
+                    2. let student = new Object();
+                    3. dùng hàm tạo contructor
+                    4. dùng class -ES6
+            lập trình hướng đối tượng OOP
+                1. đóng gói
+                2. đa hình
+                3. trừu tượng
+                4. kế thừa
+                (MODULE4-TYPESCIPT SẼ HỌC)
+            CRUD với object
+                1. creat - thêm
+                2. read - đọc
+                3. update - cập nhật
+                4. delete - xóa
+    -->
+    <script>
+        // Khởi tạo đối tượng sinh viên
+        /* let student = {}; */
+        /* let student = new Object(); */
+
+        let student = {
+            name:"hoa",
+            age:25,
+            id:5
+        }
+        // Thêm một thuộc tính là address
+        /* cách 1: student.address = "HN"; */
+        /* cách 2: student["address"] = "HN"; */
+
+        // Đọc giá trị
+        /* for (const a in student) {
+            console.log(student[a]);
+        } */
+
+        // cập nhật
+        /* student.name = "hồng" */
+
+        // xóa
+        /* delete student.name */
+        console.log(student);
+
+
+        /* let std1 = {
+            name:"hoa",
+            age:25,
+            id:1,
+            address:"Ha Noi"
+        }
+        let std2 = {
+            name:"hồng",
+            age:24,
+            id:2,
+            address:"Ha Noi"
+        } */
+
+        /* dùng hàm tạo contructor */
+        /* function Student(name,age,id,address) {
+            this.name = name;
+            this.age = age;
+            this.id = id;
+            this.address = address;
+        }
+        let std1 = new Student("hoa",25,1,"Ha Noi");
+        let std2 = new Student("hồng",24,2,"Ha Noi");
+        console.log(std1); */
+    </script>
+</body>
+</html>
