@@ -70,14 +70,12 @@
                 ++cart[checkCart].quantity;
             } else {
                 // không có sản phẩm trong giỏ hàng thì push vào
-                cart.push([products[checkProducts]]); // ... : toán tử spread
-                console.log(cart);
-
-                /* let result = cart.findIndex((item,index,value) => {
+                cart.push(products[checkProducts]);
+                let result = cart.findIndex((item,index,value) => {
                     return item.name === valueInput;
                 })
-                cart[result].quantity = 1;  */
-                
+                cart[result].quantity = 1; 
+
             }
             console.log(cart);
             //đi mua hàng rồi tính giá tiền phải trả khi mua 

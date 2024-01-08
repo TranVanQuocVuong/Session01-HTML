@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <link rel="stylesheet" href="./bai2.css">
+</head>
+
+<body>
+    <div id="container">
+        <textarea id="write" cols="100" rows="10"></textarea>
+        <ul id="keyboard">
+            <li id="characterQ" class="letter">Q</li>
+            <li id="characterW" class="letter">W</li>
+            <li id="characterE" class="letter">E</li>
+            <li id="characterR" class="letter">R</li>
+            <li id="characterT" class="letter">T</li>
+            <li id="characterY" class="letter">Y</li>
+            <li id="characterU" class="letter">U</li>
+            <li id="characterI" class="letter">I</li>
+            <li id="characterO" class="letter">O</li>
+            <li id="characterP" class="letter">P</li>
+
+            <li id="characterA" class="letter">A</li>
+            <li id="characterS" class="letter">S</li>
+            <li id="characterD" class="letter">D</li>
+            <li id="characterF" class="letter">F</li>
+            <li id="characterG" class="letter">G</li>
+            <li id="characterH" class="letter">H</li>
+            <li id="characterJ" class="letter">J</li>
+            <li id="characterK" class="letter">K</li>
+            <li id="characterL" class="letter">L</li>
+
+            <li id="characterZ" class="letter">Z</li>
+            <li id="characterX" class="letter">X</li>
+            <li id="characterC" class="letter">C</li>
+            <li id="characterV" class="letter">V</li>
+            <li id="characterB" class="letter">B</li>
+            <li id="characterN" class="letter">N</li>
+            <li id="characterM" class="letter">M</li>
+
+            <li id="characterSpace" class="space lastitem letter"> </li>
+        </ul>
+    </div>
+
+    <script>
+        var bien = document.getElementById("keyboard");
+
+        function them(e) {
+            var doi_tuong = e.target;
+            // console.log(doi_tuong.innerHTML);
+            let element = document.getElementById("write");
+            let current = element.textContent;
+            element.innerText = current + doi_tuong.innerHTML;
+        }
+        bien.addEventListener("click", them, false);
+
+
+
+        // function them() {
+        //     let element = document.getElementsByClassName("letter");
+        //     console.log(element);
+        //     // console.log(this);
+        //     for (let i = 0; i < element.length; i++) {
+        //         let a = document.getElementsByClassName("letter")[i].innerHTML;
+        //         console.log(a);                
+        //     }
+        // }
+    </script>
+
+</body>
+
+</html>
