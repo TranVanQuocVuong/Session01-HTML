@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+</head>
+<body>
+    <!-- 
+        Thực hiện làm đăng kí đăng nhập lưu ở local-storage
+            Tạo 1 mảng lưu thông tin đăng kí
+            Xác định khi đăng kí tài khoản sẽ có bao nhiêu field
+                let users = [];
+                userName:
+                email:
+                password:
+                confirmPassword:
+            
+                let user={
+                    userName: document.get...,
+                    email: document....
+                }
+                users.push(user)
+            Khi làm đăng kí thì email phải là duy nhất
+    -->
+    <label for="userName">User Name</label>
+    <input type="text" id="userName" placeholder="tên muốn đăng kí">
+    <br><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="nhập email">
+    <br><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="*********">
+    <br><br>
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" placeholder="*********">
+    <br><br>
+    <button onclick="show()" id="btn">Đăng kí</button>
+
+    <script>
+        let users = JSON.parse(localStorage.getItem("user"))||[];
+        function show() {
+            let userName= document.getElementById("userName").value;
+            let email= document.getElementById("email").value;
+            let password= document.getElementById("password").value;
+            let confirmPassword= document.getElementById("confirmPassword").value;
+            let user={
+                userName: userName,
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword
+            }
+            let checkEmail = -1;
+            if (password != confirmPassword) {
+                console.log("Nhập lại");
+                return;
+            }
+            for (let i = 0; i < users.length; i++) {
+                if (email === users[i].email) {
+                    checkEmail = 1;
+                    break;
+                }                
+            }
+            if(checkEmail == -1)
+            {
+                users.push(user)
+                localStorage.setItem("user",JSON.stringify(users))
+                window.location.href="./login.html";
+            }else{
+                console.log("Email đã bị trùng, nhập lại email");
+            }
+            console.log(users);            
+        }
+    </script>
+</body>
+</html>

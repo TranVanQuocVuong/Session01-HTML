@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <label for="userName">user</label>
+    <input type="text" id="nameLogin">
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" id="passwordLogin">
+    <br><br>
+    <button onclick="login()" id="btn">login</button>
+
+    <script>
+        function login() {
+            let nameLogin = document.getElementById("nameLogin").value;
+            let passwordLogin = document.getElementById("passwordLogin").value;
+            let users = JSON.parse(localStorage.getItem("user"))||[];
+            
+            let checkLogin = -1
+            for (let i = 0; i < users.length; i++) {
+                if (nameLogin == users[i].userName && passwordLogin == users[i].password) {
+                    checkLogin = 1;
+                    break;
+                }                
+            }
+
+            if (checkLogin == 1) {
+                alert("đăng nhập thành công");
+                window.location.href="./home.html"
+            }else{
+                alert("Sai tên đăng nhập hoặc mật khẩu");
+            }
+        }
+    </script>
+</body>
+</html>
